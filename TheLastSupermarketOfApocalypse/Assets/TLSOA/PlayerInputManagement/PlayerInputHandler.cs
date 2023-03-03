@@ -8,7 +8,8 @@ namespace TLSOA.PlayerInputManagement
     [RequireComponent(typeof(PlayerInputManager))]
     public class PlayerInputHandler : MonoBehaviour
     {
-        private static PlayerInputHandler _inputHandler = null;
+        private static PlayerInputHandler _instance = null;
+        public static PlayerInputHandler Instance => _instance;
 
         private PlayerInputManager _playerInputManager = null;
         public PlayerInputManager PlayerInputManager => _playerInputManager;
@@ -20,11 +21,11 @@ namespace TLSOA.PlayerInputManagement
 
         private void Awake()
         {
-            if(_inputHandler)
+            if(_instance)
             {
-                Destroy(_inputHandler);
+                Destroy(_instance);
             }
-            _inputHandler = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
             _playerInputManager = GetComponent<PlayerInputManager>();
             RegisterEvents();

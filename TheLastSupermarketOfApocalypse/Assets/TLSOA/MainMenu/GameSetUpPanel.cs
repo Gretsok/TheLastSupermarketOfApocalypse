@@ -1,19 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TLSOA.PlayerInputManagement;
 
 namespace TLSOA.MainMenu
 {
     public class GameSetUpPanel : MonoBehaviour
     {
-        private PlayerInputManagement.PlayerInputHandler _inputHandler = null;
+        private PlayerInputHandler _inputHandler = null;
        
         [SerializeField]
         private List<GameObject> _playerWidgets = null;
 
-        private void Awake()
+        private void Start()
         {
-            _inputHandler = FindObjectOfType<PlayerInputManagement.PlayerInputHandler>();
+            _inputHandler = PlayerInputHandler.Instance;
             if(_inputHandler)
             {
                 _inputHandler.onPlayersUpdated += HandlePlayersUpdated;
