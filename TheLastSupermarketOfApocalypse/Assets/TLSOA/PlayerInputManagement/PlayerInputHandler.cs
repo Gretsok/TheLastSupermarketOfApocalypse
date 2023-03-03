@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,13 +8,24 @@ namespace TLSOA.PlayerInputManagement
     [RequireComponent(typeof(PlayerInputManager))]
     public class PlayerInputHandler : MonoBehaviour
     {
+        private static PlayerInputHandler _inputHandler = null;
+
         private PlayerInputManager _playerInputManager = null;
+        public PlayerInputManager PlayerInputManager => _playerInputManager;
         private EPlayerManagementState _playerManagementState = EPlayerManagementState.Invalid;
 
         private List<PlayerInput> _playerInputs = new List<PlayerInput>();
 
+        public Action onPlayersUpdated = null;
+
         private void Awake()
         {
+            if(_inputHandler)
+            {
+                Destroy(_inputHandler);
+            }
+            _inputHandler = this;
+            DontDestroyOnLoad(gameObject);
             _playerInputManager = GetComponent<PlayerInputManager>();
             RegisterEvents();
         }
@@ -50,11 +62,13 @@ namespace TLSOA.PlayerInputManagement
         private void HandlePlayerJoined(PlayerInput playerInput)
         {
             _playerInputs.Add(playerInput);
+            onPlayersUpdated?.Invoke();
         }
 
         private void HandlePlayerLeft(PlayerInput playerInput)
         {
             _playerInputs.Remove(playerInput);
+            onPlayersUpdated?.Invoke();
         }
 
         public InputActionAsset GetAction(int playerIndex)
