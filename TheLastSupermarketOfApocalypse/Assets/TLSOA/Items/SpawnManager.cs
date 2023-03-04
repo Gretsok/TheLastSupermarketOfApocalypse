@@ -8,8 +8,10 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject product;
     [SerializeField] private List<GameObject> spawnPointList;
+    private List<GameObject> availableSpawnPoints;
     void Start()
     {
+        availableSpawnPoints = new List<GameObject>(spawnPointList);
         StartCoroutine("Spawner");
     }
 
@@ -25,9 +27,9 @@ public class SpawnManager : MonoBehaviour
         {
             yield return new WaitForSeconds(3.0f);
             
-            int index = UnityEngine.Random.Range(0, spawnPointList.Count);
+            int index = UnityEngine.Random.Range(0, availableSpawnPoints.Count);
             Debug.Log(index);
-            Vector3 pos = spawnPointList[index].transform.position;
+            Vector3 pos = availableSpawnPoints[index].transform.position;
             spawnPointList.RemoveAt(index);
             Instantiate(product, pos, Quaternion.identity);
         }
