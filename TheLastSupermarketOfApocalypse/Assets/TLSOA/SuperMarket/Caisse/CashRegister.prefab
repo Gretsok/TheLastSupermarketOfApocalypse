@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1751518124564744292}
   - component: {fileID: 3450179394261747649}
   - component: {fileID: 578018386555499275}
+  - component: {fileID: 2445550498975062665}
   m_Layer: 0
   m_Name: Tabouret
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2445550498975062665
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370630136070099678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8241813657968871655, guid: 8186191ab1825874bb8d937c3de6312e, type: 3}
 --- !u!1 &4267488385053614468
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +374,7 @@ GameObject:
   - component: {fileID: 4763052846111411547}
   - component: {fileID: 8213536549916416608}
   - component: {fileID: 1414559251853465970}
+  - component: {fileID: 553839550754963576}
   m_Layer: 0
   m_Name: Comptoir
   m_TagString: Untagged
@@ -431,6 +447,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &553839550754963576
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928064990313455954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7841764597520211122, guid: 7b5ecd971d4c2344e8acadc8e95c7b69, type: 3}
 --- !u!1 &5049620349310504081
 GameObject:
   m_ObjectHideFlags: 0
