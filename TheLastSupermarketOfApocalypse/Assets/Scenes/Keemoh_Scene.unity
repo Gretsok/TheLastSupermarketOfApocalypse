@@ -880,6 +880,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984760730}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1361333750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361333752}
+  - component: {fileID: 1361333751}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1361333751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361333750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95bbad4935549dd469875ef4e3c83a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameDuration: 90
+--- !u!4 &1361333752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361333750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461196428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,12 +1146,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be081d70e93259a4eb765b88d81859e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  product: {fileID: 176294441490885114, guid: 1767134ff63aacf4ca207125f73bf8fb, type: 3}
+  products:
+  - {fileID: 1245049889778829521, guid: 96ef2f0f07999a94d9c6771fb2aac644, type: 3}
+  - {fileID: 7941382370453781157, guid: 9dc46314458b6ee408ca764afbccb492, type: 3}
+  - {fileID: 8237361453635074936, guid: 1767134ff63aacf4ca207125f73bf8fb, type: 3}
   spawnPointList:
   - {fileID: 1877164895}
   - {fileID: 1786216549}
   - {fileID: 963121009}
   - {fileID: 971859524}
+  _multiplierOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _timeManager: {fileID: 1361333751}
+  _maxMultiplier: 3
 --- !u!1 &1786216549
 GameObject:
   m_ObjectHideFlags: 0
