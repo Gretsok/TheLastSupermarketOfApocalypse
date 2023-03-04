@@ -8,6 +8,7 @@ namespace TLSOA.Items.ItemSpawning
     {
         [SerializeField] private int _baseScore;
         private int _score;
+        public int Score => _score;
         private Transform _position;
         public Action<Transform, StoreProduct> onCollected;
 
