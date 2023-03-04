@@ -11,6 +11,8 @@ namespace TLSOA.MainMenu
        
         [SerializeField]
         private List<GameObject> _playerWidgets = null;
+        [SerializeField]
+        private CreditsPanel _creditsPanel = null;
 
         private void Start()
         {
@@ -55,6 +57,18 @@ namespace TLSOA.MainMenu
         {
             _inputHandler.ReadyUpForGameplay();
             SceneManager.LoadSceneAsync(1);
+        }
+
+        public void ShowCredits()
+        {
+            _creditsPanel.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
+
+        public void HideCredits()
+        {
+            _creditsPanel.gameObject.SetActive(false);
+            gameObject.SetActive(true);
         }
     }
 }
