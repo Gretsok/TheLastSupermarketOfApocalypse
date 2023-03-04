@@ -63,6 +63,7 @@ namespace TLSOA.PlayerInputManagement
         private void HandlePlayerJoined(PlayerInput playerInput)
         {
             _playerInputs.Add(playerInput);
+            playerInput.transform.SetParent(transform);
             onPlayersUpdated?.Invoke();
         }
 
