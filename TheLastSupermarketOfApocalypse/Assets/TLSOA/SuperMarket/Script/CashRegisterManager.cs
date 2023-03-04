@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class CashRegisterManager : MonoBehaviour
 {
+    
+    [SerializeField]
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,6 @@ public class CashRegisterManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if ()
+        
     }
 }
