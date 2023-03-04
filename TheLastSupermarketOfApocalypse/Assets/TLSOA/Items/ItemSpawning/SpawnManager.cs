@@ -17,6 +17,7 @@ namespace TLSOA.Items.ItemSpawning
         [SerializeField] private int _maxMultiplier = 5;
         //[SerializeField] private int _baseProductCount;
         private int _productCount => Mathf.RoundToInt(_multiplierOverTime.Evaluate(_timeManager.timeLeft / _timeManager.gameDuration).Remap(0,1,1,_maxMultiplier));
+        public float scoreMultiplier => _multiplierOverTime.Evaluate(_timeManager.timeSpent / _timeManager.gameDuration).Remap(0, 1, 1, _maxMultiplier);
 
         private List<GameObject> _availableSpawnPoints;
         private List<StoreProduct> _spawnedProducts;
@@ -50,7 +51,7 @@ namespace TLSOA.Items.ItemSpawning
             Debug.Log(products[productIndex].name);
 
             var newProduct = Instantiate(products[productIndex], pos, Quaternion.identity);
-            newProduct.Initialize(_availableSpawnPoints[positionIndex].transform, _multiplierOverTime.Evaluate(_timeManager.timeSpent/_timeManager.gameDuration).Remap(0,1,1,_maxMultiplier));
+            newProduct.Initialize(_availableSpawnPoints[positionIndex].transform, scoreMultiplier);
             newProduct.onCollected += HandleCollected;
 
             _availableSpawnPoints.RemoveAt(positionIndex);
