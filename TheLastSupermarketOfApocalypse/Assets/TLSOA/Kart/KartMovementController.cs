@@ -15,6 +15,8 @@ namespace TLSOA.Kart
         [Header("References")]
         [SerializeField]
         private Transform _model = null;
+        [SerializeField]
+        private Tools.CollisionsRelay _collisionsRelay = null;
 
         private Rigidbody _rigidbody = null;
         private Vector3 _desiredVelocity = default;
@@ -23,6 +25,12 @@ namespace TLSOA.Kart
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            //_collisionsRelay.onCollisionEnter += OnCollisionEnter;
+        }
+
+        private void OnDestroy()
+        {
+            //_collisionsRelay.onCollisionEnter -= OnCollisionEnter;
         }
 
         public void SetDesiredVelocity(Vector3 desiredVelocity)
@@ -48,5 +56,15 @@ namespace TLSOA.Kart
                 _rigidbody.velocity = normalizedVelocity * _maxVelocityLength;
             }
         }
+        /*
+        public void AddForce(Vector3 force)
+        {
+
+        }
+        
+        private void OnCollisionEnter(Collision collision)
+        {
+            _rigidbody.AddForce()
+        }*/
     }
 }
