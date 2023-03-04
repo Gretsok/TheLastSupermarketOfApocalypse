@@ -1055,6 +1055,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CashRegister
       objectReference: {fileID: 0}
+    - target: {fileID: 6291454790811820971, guid: 2026af85bd416904183f5a59b275afb4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6291454790811820974, guid: 2026af85bd416904183f5a59b275afb4,
         type: 3}
       propertyPath: m_RootOrder
