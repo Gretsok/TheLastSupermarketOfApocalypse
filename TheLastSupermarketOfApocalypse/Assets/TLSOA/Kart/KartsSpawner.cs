@@ -9,6 +9,8 @@ namespace TLSOA.Kart
         private KartMovementController _kartPrefab = null;
         [SerializeField]
         private List<Transform> _startingPositions = null;
+        [SerializeField]
+        private List<Material> _kartMaterials = null;
 
         private List<KartMovementController> _kartMovementControllers = new List<KartMovementController>();
 
@@ -24,7 +26,7 @@ namespace TLSOA.Kart
                     _kartMovementControllers.Add(kart);
                     if(kart.TryGetComponent(out KartPlayerController playerController))
                     {
-                        playerController.Initialize(i);
+                        playerController.Initialize(i, _kartMaterials[i]);
                     }
                 }
             }

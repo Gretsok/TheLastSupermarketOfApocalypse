@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,9 +10,15 @@ namespace TLSOA.Kart
 
         [SerializeField]
         private KartMovementController _movementController = null;
-        public void Initialize(int playerIndex)
+        [SerializeField]
+        private List<MeshRenderer> _renderers = null;
+        [SerializeField]
+        private List<GameObject> _spriteRenderers = null;
+        public void Initialize(int playerIndex, Material material)
         {
             _action = PlayerInputManagement.PlayerInputHandler.Instance.GetAction(playerIndex);
+            _renderers?.ForEach(r => r.material = material);
+            _spriteRenderers[playerIndex].SetActive(true);
         }
 
         private void Update()
