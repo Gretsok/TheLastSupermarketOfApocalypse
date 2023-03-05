@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 20230
+  controlID: 22256
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 20260
+  controlID: 22189
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 20261
+  controlID: 22190
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f08d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: be06eeff22daeeff92c0efff6695f0ff0e75f1ffb448f2ff1aa8f2ffac1cf3ff62f0f3ffcafdf3ffd4fdf3ff34fef3ff5e12f4fffa4bf4ffb2abf4ff12acf4ff8ec0f4ff9692f5ff08bef5ff12bef5ff72bef5ff3cd2f5ff9cd2f5fff06bf6ff506cf6ffcc80f6ff5a1bf8ff70e0f8ff66aef9ffcc80faff1e0cfcff36cbfdff10fbffff286d0000566e0000ca6e00000a6f0000
+      m_ExpandedIDs: c468e7ff5c6ce7ffc450e8ff8ee9e9ffcaaeeaff9c7debffb251ecffa82cedffbe06eeff22daeeff92c0efff6695f0ff0e75f1ffb448f2ff1aa8f2ffac1cf3ff62f0f3ffcafdf3ffd4fdf3ff34fef3ff5e12f4fffa4bf4ffb2abf4ff12acf4ff8ec0f4ff9692f5ff08bef5ff12bef5ff72bef5ff3cd2f5ff9cd2f5fff06bf6ff506cf6ffcc80f6ff5a1bf8ff70e0f8ff66aef9ffcc80faff1e0cfcff36cbfdff10fbfffff4ffffff286d0000566e0000ca6e00000a6f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -504,9 +504,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -14.825894, y: -0.004999995, z: 21.27674}
+    m_Target: {x: 4.8999996, y: 0, z: 16.14}
     speed: 2
-    m_Value: {x: -14.825894, y: -0.004999995, z: 21.27674}
+    m_Value: {x: 4.8999996, y: 0, z: 16.14}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -555,11 +555,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
+    m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_Size:
-    m_Target: 2.4765384
+    m_Target: 10
     speed: 2
-    m_Value: 2.4765384
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -641,7 +641,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: main
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -653,22 +653,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/JMO Assets/Cartoon FX/Textures
+    - Assets/TLSOA/PlayerInputManagement
     m_Globs: []
-    m_OriginalText: main
+    m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/JMO Assets/Cartoon FX/Textures
+  - Assets/TLSOA/PlayerInputManagement
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sabri\Documents\Unreal Projects\BabedyboupFloupiloup\TheLastSupermarketOfApocalypse\TheLastSupermarketOfApocalypse
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: c6a90000
-    m_LastClickedID: 43462
-    m_ExpandedIDs: 000000001c9000002490000024a8000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 271}
+    m_SelectedIDs: 62900000
+    m_LastClickedID: 36962
+    m_ExpandedIDs: 000000001c900000309000006490000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -721,9 +721,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f08d0000
-    m_LastClickedInstanceID: 36336
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000f6e6010000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 20231
+  controlID: 22257
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -825,8 +825,8 @@ MonoBehaviour:
     y: 0
     width: 365.59998
     height: 439.2
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}

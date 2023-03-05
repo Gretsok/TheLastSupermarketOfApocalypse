@@ -21,9 +21,9 @@ namespace TLSOA.PlayerInputManagement
 
         private void Awake()
         {
-            if(_instance)
+            if(_instance && _instance != this)
             {
-                Destroy(_instance);
+                Destroy(this.gameObject);
             }
             _instance = this;
             DontDestroyOnLoad(gameObject);
