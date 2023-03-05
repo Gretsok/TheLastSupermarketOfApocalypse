@@ -6,7 +6,7 @@ namespace TLSOA.Supermarker.CashRegisterer
 {
     public class CashRegistererZone : MonoBehaviour
     {
-        public bool triggerable;
+        public bool triggerable = true;
         private void OnTriggerEnter(Collider other)
         {
             if (triggerable)
