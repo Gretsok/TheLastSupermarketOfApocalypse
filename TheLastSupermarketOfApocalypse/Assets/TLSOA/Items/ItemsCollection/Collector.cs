@@ -27,7 +27,7 @@ namespace TLSOA.Items.ItemsCollection
 
             _currentLiftWeight = 0;
 
-            for(int i = _currentVisualsInKart.Count; i > 0; ++i)
+            for(int i = _currentVisualsInKart.Count -1; i >= 0; --i) 
             {
                 Destroy(_currentVisualsInKart[i]);
             }
