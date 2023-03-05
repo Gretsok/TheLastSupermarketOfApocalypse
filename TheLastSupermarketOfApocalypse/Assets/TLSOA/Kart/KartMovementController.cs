@@ -48,7 +48,7 @@ namespace TLSOA.Kart
 
             if (_desiredVelocity.sqrMagnitude > 0.1)
                 _desiredForwardOfModel = _desiredVelocity;
-            _rigidbody.MoveRotation(Quaternion.LookRotation(Vector3.Slerp(_model.transform.forward, _desiredForwardOfModel, Time.fixedDeltaTime * 15f), Vector3.up));
+            _rigidbody.MoveRotation(Quaternion.LookRotation(Vector3.Slerp(transform.forward, _desiredForwardOfModel, Time.fixedDeltaTime * 15f), Vector3.up));
             
             
             if (_rigidbody.velocity.magnitude > _maxVelocityLength)

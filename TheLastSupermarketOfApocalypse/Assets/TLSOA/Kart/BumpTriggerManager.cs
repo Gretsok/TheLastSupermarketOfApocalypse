@@ -27,9 +27,12 @@ public class BumpTriggerManager : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        
+        Debug.Log("Bwing");
         // Faire le calcul vectorielle, position du kart actuel et position du centre du kart tapé, normaliser le vecteur et multiplié la velocity
         if (other.CompareTag("Kart"))
         {
+            Debug.Log("Bwing Kart");
             _speed = _relay.getKartRigidbody().velocity.magnitude;
             _kartMovementController = _relay.getKartMovement();
             var otherCollision = other.GetComponent<RigidbodyColissionRelay>();
