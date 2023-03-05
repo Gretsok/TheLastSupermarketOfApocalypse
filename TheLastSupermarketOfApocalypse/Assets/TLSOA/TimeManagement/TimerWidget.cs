@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,16 @@ namespace TLSOA.TimeManagement
         [SerializeField]
         private Image _filler = null;
 
+        private void Start()
+        {
+            _timeManager.onGameEnded += HandleGameEnded;
+        }
 
+        private void HandleGameEnded()
+        {
+            _timeManager.onGameEnded -= HandleGameEnded;
+            gameObject.SetActive(false);
+        }
 
         private void Update()
         {
