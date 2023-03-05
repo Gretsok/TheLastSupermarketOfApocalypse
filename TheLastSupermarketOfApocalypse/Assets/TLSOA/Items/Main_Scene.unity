@@ -43769,6 +43769,11 @@ PrefabInstance:
       propertyPath: _timeManager
       value: 
       objectReference: {fileID: 1154607252}
+    - target: {fileID: 3875901081567630092, guid: bcf085582ba661a40962e3f0c7c6d910,
+        type: 3}
+      propertyPath: _timeManager
+      value: 
+      objectReference: {fileID: 1154607252}
     - target: {fileID: 6767275899863269404, guid: bcf085582ba661a40962e3f0c7c6d910,
         type: 3}
       propertyPath: _spawnManager
