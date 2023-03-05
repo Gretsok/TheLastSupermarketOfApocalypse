@@ -57,9 +57,9 @@ namespace TLSOA.Kart
             }
         }
 
-        public void Bumped(float velocity)
+        public void Bumped(Vector3 force)
         {
-            _rigidbody.AddRelativeForce(new Vector3(0,0,velocity), ForceMode.Impulse);
+            _rigidbody.AddRelativeForce(force, ForceMode.Impulse);
         }
         
         /*
