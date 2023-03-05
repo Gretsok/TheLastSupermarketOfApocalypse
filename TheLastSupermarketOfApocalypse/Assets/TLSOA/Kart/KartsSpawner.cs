@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,8 @@ namespace TLSOA.Kart
         private List<Material> _kartMaterials = null;
 
         private List<KartMovementController> _kartMovementControllers = new List<KartMovementController>();
-
+        public List<KartMovementController> kartMovementControllers { get { return _kartMovementControllers;} }
+        public Action onKartSetUp;
         private void Start()
         {
             var inputHandler = PlayerInputManagement.PlayerInputHandler.Instance;
@@ -29,6 +31,7 @@ namespace TLSOA.Kart
                         playerController.Initialize(i, _kartMaterials[i]);
                     }
                 }
+                onKartSetUp?.Invoke();
             }
         }
     }
