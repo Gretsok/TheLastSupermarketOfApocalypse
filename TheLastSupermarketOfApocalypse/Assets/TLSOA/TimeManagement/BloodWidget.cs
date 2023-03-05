@@ -21,7 +21,7 @@ namespace TLSOA.TimeManagement
             var colorTemp = _bloodScreen.color;
             colorTemp.a = _timeManager.timeSpent / _timeManager.gameDuration + Mathf.Cos(Time.time * (_speed / (2 * Mathf.PI))) * _pulseAmplitude;
             _bloodScreen.color = colorTemp;
-            Debug.Log(_bloodScreen.color.a);
+//            Debug.Log(_bloodScreen.color.a);
         }
     }
 }
