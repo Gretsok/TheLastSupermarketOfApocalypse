@@ -17673,8 +17673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1.5
-  m_FrequencyGain: 0.18
+  m_AmplitudeGain: 1.4
+  m_FrequencyGain: 0.09
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &1048142108
 PrefabInstance:
@@ -28016,7 +28016,7 @@ Transform:
   m_Children:
   - {fileID: 1045246412}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1690988346
 GameObject:
@@ -39687,7 +39687,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2017161715
 PrefabInstance:
