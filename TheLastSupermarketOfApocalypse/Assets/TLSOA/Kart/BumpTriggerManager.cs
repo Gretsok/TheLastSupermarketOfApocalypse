@@ -10,7 +10,9 @@ public class BumpTriggerManager : MonoBehaviour
 
     [SerializeField] private RigidbodyColissionRelay _relay;
     private float _speed;
+    public float bumpForce;
     private KartMovementController _kartMovementController = null;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,7 @@ public class BumpTriggerManager : MonoBehaviour
             _kartMovementController = _relay.getKartMovement();
             var otherCollision = other.GetComponent<RigidbodyColissionRelay>();
             var normalizedVector = (otherCollision.getKartRigidbody().transform.position - _relay.getKartRigidbody().transform.position).normalized;
-            otherCollision.getKartMovement().Bumped(_speed * normalizedVector);
+            otherCollision.getKartMovement().Bumped(_speed * normalizedVector * bumpForce);
         }
     }
     
