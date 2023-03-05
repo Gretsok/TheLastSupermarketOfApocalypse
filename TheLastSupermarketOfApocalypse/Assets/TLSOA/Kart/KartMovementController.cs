@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace TLSOA.Kart
@@ -48,7 +49,7 @@ namespace TLSOA.Kart
 
             if (_desiredVelocity.sqrMagnitude > 0.1)
                 _desiredForwardOfModel = _desiredVelocity;
-            _rigidbody.MoveRotation(Quaternion.LookRotation(Vector3.Slerp(_model.transform.forward, _desiredForwardOfModel, Time.fixedDeltaTime * 15f), Vector3.up));
+            _rigidbody.MoveRotation(Quaternion.LookRotation(Vector3.Slerp(transform.forward, _desiredForwardOfModel, Time.fixedDeltaTime * 15f), Vector3.up));
             
             
             if (_rigidbody.velocity.magnitude > _maxVelocityLength)
@@ -58,11 +59,15 @@ namespace TLSOA.Kart
             }
         }
 
-        public void Bumped(float velocity)
+        public void Bumped(Vector3 force)
         {
-            _rigidbody.AddRelativeForce(new Vector3(0,0,velocity), ForceMode.Impulse);
+            _rigidbody.AddRelativeForce(force, ForceMode.Impulse);
         }
-        
+
+        IEnumerator TelepertOn()
+        {
+            yield return new WaitForSeconds(1);
+        }
         /*
         public void AddForce(Vector3 force)
         {
