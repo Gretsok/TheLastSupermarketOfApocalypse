@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866c839ebe6c3254a823f6487b2e004b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseMaxVelocityLength: 20
+  _baseMaxVelocityLength: 12
   _movementForce: 700
   _model: {fileID: 0}
   _collisionsRelay: {fileID: 0}
