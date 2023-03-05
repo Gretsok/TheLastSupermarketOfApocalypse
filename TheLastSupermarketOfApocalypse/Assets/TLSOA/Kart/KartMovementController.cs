@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace TLSOA.Kart
@@ -62,7 +63,11 @@ namespace TLSOA.Kart
         {
             _rigidbody.AddRelativeForce(force, ForceMode.Impulse);
         }
-        
+
+        IEnumerator TelepertOn()
+        {
+            yield return new WaitForSeconds(1);
+        }
         /*
         public void AddForce(Vector3 force)
         {
