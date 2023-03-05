@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/TLSOA/MainMenu/MainMenu.unity
     guid: 27083b0a3d88d4d4e8bb5f78f6d1f1f9
   - enabled: 1
-    path: Assets/Scenes/Main_Scene.unity
+    path: Assets/TLSOA/Items/Main_Scene.unity
     guid: 4b67b692771ef2e4ebe0528d5383fd24
-  - enabled: 1
-    path: Assets/Scenes/Keemoh_Scene.unity
-    guid: e7226baa312a9764882da93798cbace3
   - enabled: 1
     path: Assets/TLSOA/Kart/DEV_KartControllers.unity
     guid: bea0cda40e048cc42964a1aab48cdeed
+  - enabled: 1
+    path: Assets/Scenes/Keemoh_Scene.unity
+    guid: e7226baa312a9764882da93798cbace3
   m_configObjects: {}

@@ -15,6 +15,8 @@ namespace TLSOA.TimeManagement
         [SerializeField]
         private Image _filler = null;
 
+
+
         private void Update()
         {
             if (!_timeManager) return;
