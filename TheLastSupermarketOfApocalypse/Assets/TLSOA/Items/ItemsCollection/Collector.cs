@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +7,12 @@ namespace TLSOA.Items.ItemsCollection
     public class Collector : MonoBehaviour
     {
         private int _currentLiftWeight = 0;
+        public int currentLiftWeight => _currentLiftWeight;
         private List<GameObject> _currentVisualsInKart = new List<GameObject>();
         [SerializeField]
         private Transform _visualSpawnPoint = null;
+
+        public Action onLiftedWeightChanged = null;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -18,6 +22,7 @@ namespace TLSOA.Items.ItemsCollection
                 var visual = Instantiate(collectable.CollectableVisual, _visualSpawnPoint.position, _visualSpawnPoint.rotation, _visualSpawnPoint);
                 _currentVisualsInKart.Add(visual);
                 Destroy(collectable.gameObject);
+                onLiftedWeightChanged?.Invoke();
             }
         }
 
@@ -31,7 +36,7 @@ namespace TLSOA.Items.ItemsCollection
             {
                 Destroy(_currentVisualsInKart[i]);
             }
-
+            onLiftedWeightChanged?.Invoke();
             return weight;
         }
     }
