@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class CashRegisterManager : MonoBehaviour
 {
-    
-    [SerializeField]
-    
-    
+
+    [SerializeField] private List<GameObject> _cashRegisterList; 
+
     // Start is called before the first frame update
     void Start()
     {

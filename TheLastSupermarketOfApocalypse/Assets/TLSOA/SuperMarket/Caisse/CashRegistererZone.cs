@@ -6,11 +6,15 @@ namespace TLSOA.Supermarker.CashRegisterer
 {
     public class CashRegistererZone : MonoBehaviour
     {
+        public bool triggerable;
         private void OnTriggerEnter(Collider other)
         {
-            if(other.TryGetComponent(out Collector collector))
+            if (triggerable)
             {
-                collector.GetComponent<ScoreRegisterer>().AddScore(collector.EmptyKart());
+                if(other.TryGetComponent(out Collector collector))
+                {
+                    collector.GetComponent<ScoreRegisterer>().AddScore(collector.EmptyKart());
+                }
             }
         }
     }
