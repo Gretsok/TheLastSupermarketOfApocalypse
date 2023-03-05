@@ -24,6 +24,7 @@ namespace TLSOA.PlayerInputManagement
             if(_instance && _instance != this)
             {
                 Destroy(this.gameObject);
+                return;
             }
             _instance = this;
             DontDestroyOnLoad(gameObject);
@@ -44,6 +45,7 @@ namespace TLSOA.PlayerInputManagement
 
         protected virtual void UnregisterEvents()
         {
+            if (_instance != this) return;
             _playerInputManager.onPlayerJoined -= HandlePlayerJoined;
             _playerInputManager.onPlayerLeft -= HandlePlayerLeft;
         }
